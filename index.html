@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandalMinerals Ltd | Leading Solid Mineral Extraction in Plateau State, Nigeria</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#008751',
+                        brandGreenDark: '#006B40',
+                        corporateBlue: '#1E3A8A',
+                        corporateBlueDark: '#1E40AF',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-700 antialiased selection:bg-brandGreen selection:text-white">
+
+    <!-- TOP BAR -->
+    <div
+        class="w-full bg-slate-900 text-slate-300 border-b border-slate-800 text-xs py-2.5 px-6 sm:px-12 flex justify-between items-center">
+        <div class="flex items-center space-x-6 overflow-x-auto">
+            <span class="flex items-center"><i class="fa-solid fa-chart-line text-brandGreen mr-2"></i> NGX: RAND +3.42
+                (+2.15%)</span>
+            <span class="hidden md:flex items-center"><i class="fa-solid fa-location-dot text-brandGreen mr-2"></i> HQ:
+                Zawan, Jos South, Plateau State, Nigeria</span>
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="#contact" class="hover:text-brandGreen transition-colors hidden sm:inline">Contact</a>
+            <a href="#compliance" class="hover:text-brandGreen transition-colors hidden sm:inline">MSMD Compliance</a>
+            <a href="#contact" class="hover:text-brandGreen transition-colors">Support</a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header
+        class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300"
+        id="navbar">
+        <div class="w-full px-6 sm:px-12 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <img src="logo.jpg" alt="Randal Minerals Ltd Logo"
+                    class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden xl:flex items-center space-x-6 font-medium text-sm">
+                <a href="#home"
+                    class="nav-link text-brandGreen font-semibold transition-colors hover:text-brandGreen">Home</a>
+                <a href="#about" class="nav-link text-slate-600 hover:text-brandGreen transition-colors">About Us</a>
+                <a href="#team" class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Executive
+                    Team</a>
+                <a href="#history" class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Historical
+                    Map</a>
+                <a href="#operations"
+                    class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Operations</a>
+                <a href="#sustainability"
+                    class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Community & ESG</a>
+                <a href="#compliance"
+                    class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Licensing</a>
+                <a href="#investors"
+                    class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Investors</a>
+                <a href="#news" class="nav-link text-slate-600 hover:text-brandGreen transition-colors">News</a>
+                <a href="#contact" class="nav-link text-slate-600 hover:text-brandGreen transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center space-x-4">
+                <button onclick="openPortalModal()"
+                    class="bg-corporateBlue hover:bg-corporateBlueDark text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-md transition-all transform hover:-translate-y-0.5">
+                    Partner Portal
+                </button>
+            </div>
+
+            <button id="menu-btn" class="xl:hidden text-slate-700 hover:text-slate-900 focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden xl:hidden bg-white border-b border-slate-200 px-6 pt-4 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="mobile-nav-link block text-brandGreen font-semibold py-2">Home</a>
+            <a href="#about" class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">About
+                Us</a>
+            <a href="#team"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Executive Team</a>
+            <a href="#history"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Historical Map</a>
+            <a href="#operations"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Operations</a>
+            <a href="#sustainability"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Community & ESG</a>
+            <a href="#compliance"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Licensing &
+                Regulatory</a>
+            <a href="#investors"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Investors</a>
+            <a href="#news" class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">News</a>
+            <a href="#contact"
+                class="mobile-nav-link block text-slate-600 hover:text-brandGreen font-medium py-2">Contact</a>
+            <button onclick="openPortalModal()"
+                class="w-full text-center bg-corporateBlue text-white py-3 rounded-lg font-semibold mt-4">Partner
+                Portal</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home"
+        class="relative min-h-[85vh] w-full flex items-center justify-center bg-slate-900 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-45">
+            <img src="img_h_4.jpg" alt="Heavy Mineral Processing Plant"
+                class="w-full h-full object-cover transform scale-105 transition-transform duration-1000 ease-out"
+                id="hero-bg">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent z-1"></div>
+
+        <div class="relative z-10 w-full px-6 sm:px-12 py-24">
+            <div class="max-w-3xl">
+                <span
+                    class="inline-flex items-center space-x-2 bg-brandGreen/15 border border-brandGreen/30 text-brandGreen px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 animate-pulse">
+                    <i class="fa-solid fa-award"></i> Licensed Solid Mineral Extraction in Nigeria
+                </span>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+                    Unlocking Nigeria's <span class="text-brandGreen">Mineral Wealth</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    RandalMinerals Ltd leads the responsible extraction of critical solid minerals, metallic ores, and
+                    industrial raw materials across Plateau State and the broader Nigerian federation.
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#operations"
+                        class="bg-brandGreen hover:bg-brandGreenDark text-white text-center px-8 py-4 rounded-xl font-bold shadow-xl shadow-brandGreen/25 transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                        <span>Explore Mineral Assets</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#compliance"
+                        class="border border-slate-600 hover:border-slate-400 bg-white/15 backdrop-blur text-white text-center px-8 py-4 rounded-xl font-bold transition-all hover:bg-white/20">
+                        View Mining Titles
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="w-full py-24 bg-white border-b border-slate-200">
+        <div class="w-full px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-corporateBlue font-bold text-xs uppercase tracking-widest bg-corporateBlue/10 px-3 py-1 rounded-full">Indigenously
+                    Rooted</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 mb-6">Built on Plateau's Rich Mining
+                    Heritage</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Headquartered at 18, Old Hospital Road, Zawan, Jos South, RandalMinerals Ltd blends decades of local
+                    geological insight with modern extraction technology. We operate in strict compliance with the
+                    Nigerian Minerals and Mining Act, driving local value addition, employment, and sustainable
+                    infrastructure development.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-brandGreen pl-4">
+                        <h4 class="text-2xl font-bold text-slate-900">100% Indigenous</h4>
+                        <p class="text-sm text-slate-500">Nigerian Management & Workforce</p>
+                    </div>
+                    <div class="border-l-2 border-corporateBlue pl-4">
+                        <h4 class="text-2xl font-bold text-slate-900">4 Active Sites</h4>
+                        <p class="text-sm text-slate-500">Across Plateau & North-Central</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group cursor-pointer"
+                onclick="openLightbox('img_h_4.jpg', 'Industrial Mineral Processing Equipment')">
+                <img src="img_h_4.jpg" alt="Industrial Mineral Processing Equipment"
+                    class="rounded-2xl shadow-xl w-full object-cover transform transition-transform duration-500 group-hover:scale-[1.02]">
+                <div
+                    class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-expand text-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- MISSION & VISION SUB-SECTION -->
+        <div class="w-full px-6 sm:px-12 mt-20 pt-16 border-t border-slate-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="text-brandGreen text-2xl mb-4"><i class="fa-solid fa-eye"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Our Vision</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Is to create enduring value for our shareholders, contribute to the socio-economic development
+                        of our communities, and be recognized globally as a trusted leader in the responsible extraction
+                        of mineral resources.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="text-brandGreen text-2xl mb-4"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Our Mission</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Is to be a leading player in the mining industry, fostering economic growth, technological
+                        advancement, and lasting partnerships with stakeholders.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXECUTIVE TEAM SECTION -->
+    <section id="team" class="w-full py-24 bg-slate-50 border-b border-slate-200">
+        <div class="w-full px-6 sm:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="text-corporateBlue font-bold text-xs uppercase tracking-widest bg-corporateBlue/10 px-3 py-1 rounded-full">Leadership</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 mb-2">Our Executive Team</h2>
+                <p class="text-slate-600">Guided by seasoned professionals committed to operational excellence and
+                    sustainable growth.</p>
+            </div>
+
+    <!-- Rangnaan Kangnaan -->
+                <div
+                    class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-3">
+                    <div class="bg-slate-900 relative overflow-hidden flex items-center justify-center p-6 md:p-0">
+                        <img src="person_2.jpg" alt="Rangnaan Kangnaan"
+                            class="w-full h-full object-cover min-h-[320px] max-h-[400px]">
+                    </div>
+                    <div class="md:col-span-2 p-8 sm:p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h3 class="text-2xl font-extrabold text-slate-900">Rangnaan Kangnaan</h3>
+                                <span
+                                    class="bg-brandGreen/10 text-brandGreen font-bold text-xs px-3 py-1 rounded-full uppercase">Founder
+                                    / MD</span>
+                            </div>
+                            <p class="text-sm font-semibold text-corporateBlue mb-4">Randal Minerals Nigeria Ltd</p>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                He is a seasoned professional in the financial and business industry, with extensive
+                                knowledge and experience of both local and international transactions in the banking
+                                sector. He is equipped with well above 15 years of financial sector experience covering
+                                Banking and Finance, Marketing, Administration and Insurance. Advanced knowledge of
+                                these sectors has positioned Rangnaan to collaborate in founding this venture and giving
+                                it the potential to be an industry leader. He is the Founder/MD of Randal Minerals
+                                Nigeria Ltd, giving leadership in Administration, Finance and Service delivery.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-100 pt-4 mt-auto">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Education &
+                                Credentials</h4>
+                            <p class="text-xs text-slate-700 font-medium"><i
+                                    class="fa-solid fa-graduation-cap text-brandGreen mr-1.5"></i> MBA (Artificial
+                                Intelligence), University of Cumbria, Switzerland | Bachelor’s Degree in Sociology,
+                                University of Jos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Rangnaan Kangnaan -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-3">
+            <div class="bg-slate-900 relative overflow-hidden flex items-center justify-center p-6 md:p-0">
+                <img src="person_3.jpg" alt="Rangnaan Kangnaan" class="w-full h-full object-cover min-h-[320px] max-h-[400px]">
+            </div>
+            <div class="md:col-span-2 p-8 sm:p-10 flex flex-col justify-between">
+                <div>
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                        <h3 class="text-2xl font-extrabold text-slate-900">Musuka H. Goke.</h3>
+                        <span
+                            class="bg-brandGreen/10 text-brandGreen font-bold text-xs px-3 py-1 rounded-full uppercase">General Manager
+                            </span>
+                    </div>
+                    <p class="text-sm font-semibold text-corporateBlue mb-4">Randal Minerals Nigeria Ltd</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    A highly skilled and results-oriented professional with a diverse background in economics,
+                    leadership, and strategic management, currently heading Operations as the General
+                    Manager in Randal Minerals Nigeria ltd. Musuka Leverages a strong educational foundation,
+                    extensive managerial experience, and proficiency in various skills, He is dedicated to steering
+                    the company towards operational excellence, sustainable practices, and growth.
+                    He holds a BSc in Economics from the Eastern Mediterranean University, Cyprus and
+                    currently pursuing a second degree in theology.
+                    </p>
+                </div>
+                <div class="border-t border-slate-100 pt-4 mt-auto">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Education &
+                        Credentials</h4>
+                    <p class="text-xs text-slate-700 font-medium"><i
+                            class="fa-solid fa-graduation-cap text-brandGreen mr-1.5"></i> BSC (BSc in Economics), Eastern Mediterranean University, Cyprus.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </section>
+<!-- Rangnaan Kangnaan -->
+<div class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-3">
+    <div class="bg-slate-900 relative overflow-hidden flex items-center justify-center p-6 md:p-0">
+        <img src="person_1.jpg" alt="Rangnaan Kangnaan" class="w-full h-full object-cover min-h-[320px] max-h-[400px]">
+    </div>
+    <div class="md:col-span-2 p-8 sm:p-10 flex flex-col justify-between">
+        <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-2xl font-extrabold text-slate-900">Alex Dalyop</h3>
+                <span
+                    class="bg-brandGreen/10 text-brandGreen font-bold text-xs px-3 py-1 rounded-full uppercase">Founder
+                    / MD</span>
+            </div>
+            <p class="text-sm font-semibold text-corporateBlue mb-4">Randal Minerals Nigeria Ltd</p>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            A proven team leader, expert communicator, business developer and projects manager with a deep knowledge of the Nigerian
+            Mining industry, Quarry and Products market, Trading and Supply and also a grounded Community relations manager,
+            collaborating with the Host communities to maintain cordial relationships with all stake holders. He has over 25 years
+            hands-on experience in Mining and Quarry Activity.
+            Alex Dalyop is a Founder and Managing Director at Randal Minerals Nig Ltd, leading the management team in the area of
+            Mining Expertise, Strategic Planning and Project Management. He Holds a BSC in Business Administration From the Ahmadu
+            Bello University, Zaria and also a Masters Degree in Business Administration from the University Of Jos, Nigeria.
+            </p>
+        </div>
+        <div class="border-t border-slate-100 pt-4 mt-auto">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Education &
+                Credentials</h4>
+            <p class="text-xs text-slate-700 font-medium"><i
+                    class="fa-solid fa-graduation-cap text-brandGreen mr-1.5"></i> BSC (Business Administration ), Ahmadu Bello University),Masters in Business Administration,
+                University of Jos, Nigeria</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+    </section>
+
+    <!-- HISTORICAL MAP SECTION -->
+    <section id="history" class="w-full py-24 bg-slate-50 border-b border-slate-200">
+        <div class="w-full px-6 sm:px-12">
+            <div
+                class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 bg-brandGreen/10 text-brandGreen px-4 py-2 rounded-bl-xl text-xs font-bold">
+                    <i class="fa-solid fa-map-location-dot mr-1"></i> Interactive Map Timeline</div>
+                <span
+                    class="text-corporateBlue font-bold text-xs uppercase tracking-widest bg-corporateBlue/10 px-3 py-1 rounded-full">Historical
+                    Map & Corporate Profile</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-4 mb-6">Shaping the Future of Mining</h2>
+                <p class="text-lg font-medium text-brandGreen mb-6">
+                    Unearth Your Potential - Join Us in Shaping the Future of Mining. Explore Opportunities Today!
+                </p>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Registered in November 2023, at RANDAL Minerals Nigeria Limited, we are dedicated to responsibly
+                    harnessing the Earth's rich mineral resources to contribute significantly to the sustainable
+                    development of our nation. Through cutting-edge mining practices and quarry services, we aim to meet
+                    the global demand for high-quality minerals while prioritizing environmental stewardship, community
+                    engagement, and the well-being of our workforce.
+                </p>
+                <div class="border-t border-slate-100 pt-6 flex flex-wrap gap-4 text-xs font-semibold text-slate-500">
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-slate-700"><i
+                            class="fa-solid fa-calendar-days text-brandGreen mr-1.5"></i> Est. November 2023</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg text-slate-700"><i
+                            class="fa-solid fa-mountain text-brandGreen mr-1.5"></i> Quarry & Mining Services</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPERATIONS SECTION -->
+    <section id="operations" class="w-full py-24 bg-slate-50">
+        <div class="w-full px-6 sm:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">Our Solid Mineral Portfolio</h2>
+                <p class="text-slate-600">Extracting and processing strategic mineral resources native to the Plateau
+                    terrain and Nigerian crust. Click category buttons to filter assets instantly.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="filterAssets('all')"
+                    class="filter-btn active-filter px-6 py-2.5 rounded-lg font-semibold text-sm bg-brandGreen text-white transition-all shadow-md">All
+                    Minerals</button>
+                <button onclick="filterAssets('tin')"
+                    class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition-all">Tin
+                    & Columbite</button>
+                <button onclick="filterAssets('lithium')"
+                    class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition-all">Lithium
+                    Pegmatite</button>
+                <button onclick="filterAssets('gold')"
+                    class="filter-btn px-6 py-2.5 rounded-lg font-semibold text-sm bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition-all">Gold
+                    & Ores</button>
+            </div>
+
+            <!-- Grid Items -->
+            <div id="assets-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="asset-card tin bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all group">
+                    <div class="h-48 overflow-hidden relative cursor-pointer"
+                        onclick="openLightbox('img_h_1.jpg', 'Jos Plateau Tin Fields')">
+                        <img src="img_h_1.jpg" alt="Processed Mineral Aggregate"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 bg-brandGreen text-white text-xs px-3 py-1 rounded-full font-bold uppercase">Tin
+                            & Columbite</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Jos Plateau Tin Fields</h3>
+                        <p class="text-slate-600 text-sm mb-4">High-grade alluvial cassiterite and columbite mining
+                            operations utilizing modernized washing plants.</p>
+                        <div
+                            class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs text-slate-500">
+                            <span>License: <strong class="text-slate-900">ML 4120 (Jos South)</strong></span>
+                            <button
+                                onclick="openAssetModal('Jos Plateau Tin Fields', 'ML 4120 (Jos South)', 'High-grade alluvial cassiterite and columbite mining operations utilizing modernized washing plants in Jos South, Plateau State.')"
+                                class="text-corporateBlue font-semibold hover:underline">View Details &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="asset-card lithium bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all group">
+                    <div class="h-48 overflow-hidden relative cursor-pointer"
+                        onclick="openLightbox('img_h_4.jpg', 'Pankshin Lithium Pegmatite Belt')">
+                        <img src="img_h_4.jpg" alt="Lithium Processing Site"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 bg-emerald-600 text-white text-xs px-3 py-1 rounded-full font-bold uppercase">Lithium</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Pankshin Lithium Pegmatite Belt</h3>
+                        <p class="text-slate-600 text-sm mb-4">Targeted pegmatite vein extraction rich in spodumene and
+                            lepidolite for green energy markets.</p>
+                        <div
+                            class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs text-slate-500">
+                            <span>License: <strong class="text-slate-900">EL 8904 (Pankshin)</strong></span>
+                            <button
+                                onclick="openAssetModal('Pankshin Lithium Pegmatite Belt', 'EL 8904 (Pankshin)', 'Targeted pegmatite vein extraction rich in spodumene and lepidolite for global green energy markets and battery production.')"
+                                class="text-corporateBlue font-semibold hover:underline">View Details &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="asset-card gold bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all group">
+                    <div class="h-48 overflow-hidden relative cursor-pointer"
+                        onclick="openLightbox('img_h_1.jpg', 'Wase Gold Prospect')">
+                        <img src="img_h_1.jpg" alt="Gold Mining Operation Ores"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-4 right-4 bg-amber-600 text-white text-xs px-3 py-1 rounded-full font-bold uppercase">Gold
+                            Ores</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Wase Gold Prospect</h3>
+                        <p class="text-slate-600 text-sm mb-4">Secure primary gold ore exploration and extraction
+                            operating under strict environmental guidelines.</p>
+                        <div
+                            class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs text-slate-500">
+                            <span>License: <strong class="text-slate-900">ML 3156 (Wase LGA)</strong></span>
+                            <button
+                                onclick="openAssetModal('Wase Gold Prospect', 'ML 3156 (Wase LGA)', 'Secure primary gold ore exploration and extraction operating under strict environmental and community security guidelines.')"
+                                class="text-corporateBlue font-semibold hover:underline">View Details &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUSTAINABILITY & COMMUNITY RELATIONS -->
+    <section id="sustainability" class="w-full py-24 bg-white border-t border-slate-200">
+        <div class="w-full px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-corporateBlue font-bold text-xs uppercase tracking-widest bg-corporateBlue/10 px-3 py-1 rounded-full">Host
+                    Communities First</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-4 mb-6">Sustainable Mining & Land
+                    Reclamation in Plateau</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    We recognize our duty to restore mined lands. Our environmental strategy includes backfilling
+                    historic open-cast mining pits, tree planting campaigns across host communities, and partnering with
+                    local councils to deliver clean water and youth employment.
+                </p>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1 text-slate-700">
+                            <span>Host Community Development Agreement (CDA) Compliance</span>
+                            <span class="text-brandGreen">100%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-brandGreen h-2.5 rounded-full transition-all duration-1000"
+                                style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1 text-slate-700">
+                            <span>Land Reclamation & Re-forestation Progress</span>
+                            <span class="text-brandGreen">85%</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-brandGreen h-2.5 rounded-full transition-all duration-1000"
+                                style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative cursor-pointer"
+                onclick="openLightbox('img_h_4.jpg', 'Plant Rehabilitation and Processing')">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+                    <img src="img_h_4.jpg" alt="Plant Rehabilitation and Processing"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LICENSING & REGULATORY COMPLIANCE -->
+    <section id="compliance" class="w-full py-24 bg-slate-50 border-t border-slate-200">
+        <div class="w-full px-6 sm:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="text-corporateBlue font-bold text-xs uppercase tracking-widest bg-corporateBlue/10 px-3 py-1 rounded-full">Legal
+                    Framework</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-4 mb-2">Regulatory Compliance & Standards</h2>
+                <p class="text-slate-600">Fully licensed and compliant with Nigerian federal mining laws and
+                    environmental standards.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-brandGreen text-2xl mb-4"><i class="fa-solid fa-file-shield"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">MSMD Mining Titles</h3>
+                    <p class="text-sm text-slate-600">Operating under valid Exploration Licences (EL) and Mining Leases
+                        (ML) issued by the Federal Ministry of Solid Minerals Development.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-brandGreen text-2xl mb-4"><i class="fa-solid fa-seedling"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">NESREA Guidelines</h3>
+                    <p class="text-sm text-slate-600">Strict adherence to environmental impact assessments (EIA)
+                        monitored by the National Environmental Standards and Regulations Enforcement Agency.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-brandGreen text-2xl mb-4"><i class="fa-solid fa-users-rectangle"></i></div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">NEITI Transparency</h3>
+                    <p class="text-sm text-slate-600">Full financial accountability and royalty disclosures aligned with
+                        the Nigeria Extractive Industries Transparency Initiative.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTOR RELATIONS SECTION -->
+    <section id="investors" class="w-full py-24 bg-white border-t border-slate-200">
+        <div class="w-full px-6 sm:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                <div>
+                    <span class="text-corporateBlue font-bold text-xs uppercase tracking-widest">Shareholder
+                        Center</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Financials & Investment Opportunities</h2>
+                </div>
+                <button onclick="alert('Investor Prospectus package will be downloaded shortly.')"
+                    class="mt-4 md:mt-0 text-sm font-semibold text-corporateBlue hover:underline flex items-center space-x-1">
+                    <span>Request Prospectus</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <span class="text-slate-500 text-xs block uppercase font-medium">NGX Valuation</span>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mt-1 mb-2">₦48.5B</h3>
+                    <span class="text-emerald-600 text-xs font-semibold"><i class="fa-solid fa-arrow-up"></i> +5.4%
+                        YTD</span>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <span class="text-slate-500 text-xs block uppercase font-medium">Annual Revenue (FY25)</span>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mt-1 mb-2">₦14.2B</h3>
+                    <span class="text-emerald-600 text-xs font-semibold"><i class="fa-solid fa-arrow-up"></i> +14.2%
+                        YoY</span>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+                    <span class="text-slate-500 text-xs block uppercase font-medium">Local Processing Plants</span>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mt-1 mb-2">2 Active</h3>
+                    <span class="text-slate-500 text-xs font-semibold">Jos & Pankshin Axis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS & MEDIA SECTION -->
+    <section id="news" class="w-full py-24 bg-slate-50 border-t border-slate-200">
+        <div class="w-full px-6 sm:px-12">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-corporateBlue font-bold text-xs uppercase tracking-widest">Press Releases</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Latest Company News</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <span class="text-xs text-brandGreen font-bold uppercase">Expansion • August 14, 2026</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">RandalMinerals Ltd Launches New Lithium
+                            Ore Washing Facility in Pankshin</h3>
+                        <p class="text-sm text-slate-600 mb-4">State-of-the-art beneficiation plant aims to boost
+                            export-grade spodumene production by 50%.</p>
+                        <button
+                            onclick="openNewsModal('RandalMinerals Ltd Launches New Lithium Ore Washing Facility in Pankshin', 'August 14, 2026', 'State-of-the-art beneficiation plant aims to boost export-grade spodumene production by 50%. Located strategically in Pankshin, this facility guarantees enhanced washing and sorting capacity for high-grade lithium pegmatite ores.')"
+                            class="text-xs font-semibold text-corporateBlue hover:underline">Read Full Release
+                            &rarr;</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <span class="text-xs text-brandGreen font-bold uppercase">Community • July 29, 2026</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">Signing Community Development Agreement
+                            for Jos South Operations</h3>
+                        <p class="text-sm text-slate-600 mb-4">Partnership guarantees local scholarship funds, road
+                            rehabilitation, and youth skill acquisition.</p>
+                        <button
+                            onclick="openNewsModal('Signing Community Development Agreement for Jos South Operations', 'July 29, 2026', 'Partnership guarantees local scholarship funds, road rehabilitation, and youth skill acquisition around our primary mining titles in Zawan and Jos South.')"
+                            class="text-xs font-semibold text-corporateBlue hover:underline">Read Full Release
+                            &rarr;</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <span class="text-xs text-brandGreen font-bold uppercase">Regulatory • July 05, 2026</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2 mb-3">MSMD Commends RandalMinerals Ltd on
+                            Environmental Best Practices</h3>
+                        <p class="text-sm text-slate-600 mb-4">Federal inspection team highlights exemplary land
+                            reclamation efforts across Plateau mining sites.</p>
+                        <button
+                            onclick="openNewsModal('MSMD Commends RandalMinerals Ltd on Environmental Best Practices', 'July 05, 2026', 'Federal inspection team highlights exemplary land reclamation efforts across Plateau mining sites, confirming full alignment with NESREA regulations.')"
+                            class="text-xs font-semibold text-corporateBlue hover:underline">Read Full Release
+                            &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & HEADQUARTERS -->
+    <section id="contact" class="w-full py-24 bg-white border-t border-slate-200">
+        <div class="w-full px-6 sm:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <span class="text-corporateBlue font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-6">Zawan Headquarters & Inquiries</h2>
+                <p class="text-slate-600 mb-8">Reach out to our administrative offices in Jos South for corporate
+                    partnerships, mineral supply contracts, or regulatory inquiries.</p>
+
+                <div class="space-y-4 text-sm text-slate-700">
+                    <p class="flex items-center"><i class="fa-solid fa-location-dot text-brandGreen w-6"></i> 18, Old
+                        Hospital Road, Zawan, Jos South, Plateau State. Nigeria</p>
+                    <p class="flex items-center"><i class="fa-solid fa-phone text-brandGreen w-6"></i> +234 8030826644,
+                        +234 8032970154</p>
+                    <p class="flex items-center"><i class="fa-solid fa-envelope text-brandGreen w-6"></i>
+                        info@randalminerals.com</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Full Name</label>
+                        <input type="text" id="form-name" required
+                            class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-corporateBlue">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Email Address</label>
+                        <input type="email" id="form-email" required
+                            class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-corporateBlue">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Phone Number</label>
+                        <input type="tel" id="form-phone" placeholder="+234..."
+                            class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-corporateBlue">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Message</label>
+                        <textarea rows="4" id="form-message" required
+                            class="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 text-slate-900 focus:outline-none focus:border-corporateBlue"></textarea>
+                    </div>
+                    <button type="submit" id="form-submit-btn"
+                        class="w-full bg-corporateBlue hover:bg-corporateBlueDark text-white font-bold py-3.5 rounded-lg transition-all shadow-md flex items-center justify-center space-x-2">
+                        <span>Submit Inquiry</span>
+                    </button>
+                </form>
+                <div id="form-success"
+                    class="hidden absolute inset-0 bg-white/95 backdrop-blur rounded-2xl flex flex-col items-center justify-center p-8 text-center fade-in">
+                    <div
+                        class="w-16 h-16 bg-emerald-100 text-brandGreen rounded-full flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Inquiry Submitted Successfully!</h3>
+                    <p class="text-slate-600 text-sm mb-6">Thank you for reaching out to RandalMinerals Ltd. Our team at
+                        Zawan headquarters will review your message and get back to you shortly.</p>
+                    <button onclick="resetContactForm()"
+                        class="bg-corporateBlue text-white px-6 py-2.5 rounded-lg text-sm font-semibold">Send Another
+                        Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-slate-900 border-t border-slate-800 py-12 text-slate-400 text-xs">
+        <div class="w-full px-6 sm:px-12 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p>&copy; 2026 RandalMinerals Ltd. All rights reserved. Licensed by MSMD.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-brandGreen transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-brandGreen transition-colors">Terms of Use</a>
+                <a href="#" class="hover:text-brandGreen transition-colors">NEITI Disclosures</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODALS -->
+
+    <!-- Asset Detail Modal -->
+    <div id="asset-modal"
+        class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-8 shadow-2xl relative fade-in">
+            <button onclick="closeAssetModal()"
+                class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <span class="text-xs bg-brandGreen/10 text-brandGreen font-bold px-3 py-1 rounded-full uppercase">Mineral
+                Asset Specification</span>
+            <h3 id="modal-title" class="text-2xl font-extrabold text-slate-900 mt-4 mb-2"></h3>
+            <p id="modal-license" class="text-sm font-semibold text-corporateBlue mb-4"></p>
+            <p id="modal-desc" class="text-slate-600 text-sm mb-6 leading-relaxed"></p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 text-xs text-slate-600">
+                <p><i class="fa-solid fa-circle-info text-brandGreen mr-1.5"></i> All extractions adhere to strict
+                    federal safety and environmental reclamation laws.</p>
+            </div>
+            <button onclick="closeAssetModal()"
+                class="w-full bg-corporateBlue text-white py-3 rounded-xl font-semibold text-sm">Close Window</button>
+        </div>
+    </div>
+
+    <!-- News Reading Modal -->
+    <div id="news-modal"
+        class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-8 shadow-2xl relative fade-in">
+            <button onclick="closeNewsModal()"
+                class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <span id="news-modal-date" class="text-xs text-brandGreen font-bold uppercase"></span>
+            <h3 id="news-modal-title" class="text-2xl font-extrabold text-slate-900 mt-2 mb-4"></h3>
+            <p id="news-modal-body" class="text-slate-600 text-sm mb-6 leading-relaxed"></p>
+            <button onclick="closeNewsModal()"
+                class="w-full bg-slate-900 text-white py-3 rounded-xl font-semibold text-sm">Back to News</button>
+        </div>
+    </div>
+
+    <!-- Partner Portal Modal -->
+    <div id="portal-modal"
+        class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl relative fade-in">
+            <button onclick="closePortalModal()"
+                class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="text-center mb-6">
+                <div
+                    class="w-12 h-12 bg-corporateBlue/10 text-corporateBlue rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-lock"></i></div>
+                <h3 class="text-2xl font-extrabold text-slate-900">Partner & Investor Portal</h3>
+                <p class="text-xs text-slate-500 mt-1">Secure login for registered stakeholders and mineral off-takers.
+                </p>
+            </div>
+            <form
+                onsubmit="event.preventDefault(); alert('Login credentials verified. Welcome to RandalMinerals Stakeholder Portal.'); closePortalModal();"
+                class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Stakeholder Email /
+                        ID</label>
+                    <input type="email" required placeholder="partner@randalminerals.com"
+                        class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-corporateBlue">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase mb-2">Secure Passcode</label>
+                    <input type="password" required placeholder="••••••••"
+                        class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-corporateBlue">
+                </div>
+                <button type="submit"
+                    class="w-full bg-corporateBlue hover:bg-corporateBlueDark text-white font-bold py-3.5 rounded-lg text-sm transition-all shadow-md">
+                    Access Portal Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox-modal"
+        class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4 cursor-pointer"
+        onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()"
+                class="absolute -top-12 right-0 text-white text-2xl hover:text-slate-300"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <img id="lightbox-img" src="" alt="" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl object-contain">
+            <p id="lightbox-caption" class="text-white text-sm font-medium mt-4"></p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar effect on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 40) {
+                navbar.classList.add('shadow-md', 'py-1');
+            } else {
+                navbar.classList.remove('shadow-md', 'py-1');
+            }
+        });
+
+        // Filter Assets
+        function filterAssets(category) {
+            const cards = document.querySelectorAll('.asset-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brandGreen', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'border', 'border-slate-300', 'text-slate-700');
+            });
+
+            event.target.classList.remove('bg-white', 'border', 'border-slate-300', 'text-slate-700');
+            event.target.classList.add('bg-brandGreen', 'text-white', 'shadow-md');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                    card.classList.add('fade-in');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Asset Detail Modal
+        function openAssetModal(title, license, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-license').innerText = 'Mining Title: ' + license;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('asset-modal').classList.remove('hidden');
+            document.getElementById('asset-modal').classList.add('flex');
+        }
+        function closeAssetModal() {
+            document.getElementById('asset-modal').classList.add('hidden');
+            document.getElementById('asset-modal').classList.remove('flex');
+        }
+
+        // News Modal
+        function openNewsModal(title, date, body) {
+            document.getElementById('news-modal-title').innerText = title;
+            document.getElementById('news-modal-date').innerText = date;
+            document.getElementById('news-modal-body').innerText = body;
+            document.getElementById('news-modal').classList.remove('hidden');
+            document.getElementById('news-modal').classList.add('flex');
+        }
+        function closeNewsModal() {
+            document.getElementById('news-modal').classList.add('hidden');
+            document.getElementById('news-modal').classList.remove('flex');
+        }
+
+        // Partner Portal Modal
+        function openPortalModal() {
+            document.getElementById('portal-modal').classList.remove('hidden');
+            document.getElementById('portal-modal').classList.add('flex');
+            mobileMenu.classList.add('hidden');
+        }
+        function closePortalModal() {
+            document.getElementById('portal-modal').classList.add('hidden');
+            document.getElementById('portal-modal').classList.remove('flex');
+        }
+
+        // Image Lightbox
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+            document.getElementById('lightbox-modal').classList.add('flex');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.getElementById('lightbox-modal').classList.remove('flex');
+        }
+
+        // Contact Form Submission Handler with Success State
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('form-submit-btn');
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+            setTimeout(() => {
+                btn.innerHTML = 'Submit Inquiry';
+                document.getElementById('contact-form').reset();
+                document.getElementById('form-success').classList.remove('hidden');
+                document.getElementById('form-success').classList.add('flex');
+            }, 1000);
+        }
+
+        function resetContactForm() {
+            document.getElementById('form-success').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('flex');
+        }
+    </script>
+</body>
+
+</html>
